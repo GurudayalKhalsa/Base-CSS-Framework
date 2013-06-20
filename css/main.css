@@ -1,0 +1,7 @@
+.images, .images h4{
+    text-align: center;
+}
+
+.images img{
+    display: inline;
+}
