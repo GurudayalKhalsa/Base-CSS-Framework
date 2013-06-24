@@ -622,7 +622,7 @@ legend {
     font-weight: bold;
     font-size: 13px;  }
 select {
-    width: 220px; }
+    max-width: 220px; }
 input[type="checkbox"] {
     display: inline; }
 label span,
@@ -664,23 +664,18 @@ legend span {
     color: #444;
     color: rgba(0,0,0,.8);
     *color: #444;
-    border: 1px solid #ccc;
-    background-color: #E6E6E6;
+    border: none;
+    background-color: #ddd;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.2) inset;
     text-decoration: none;
-    border-radius: 2px;
+    border-radius: 4px;
     -webkit-font-smoothing: antialiased;
     -webkit-transition: .1s linear -webkit-box-shadow;
     -moz-transition: .1s linear -moz-box-shadow;
     -ms-transition: .1s linear box-shadow;
     -o-transition: .1s linear box-shadow;
     transition: .1s linear box-shadow;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#1a000000', GradientType=0);
-    background-image: -webkit-gradient(linear,0 0,0 100%,from(transparent),color-stop(40%,rgba(0,0,0,0)),to(rgba(0,0,0,.05)));
-    background-image: -webkit-linear-gradient(transparent,rgba(0,0,0,0) 40%,rgba(0,0,0,.05));
-    background-image: -moz-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,.05));
-    background-image: -ms-linear-gradient(transparent,rgba(0,0,0,0) 40%,rgba(0,0,0,.05));
-    background-image: -o-linear-gradient(transparent,rgba(0,0,0,0) 40%,rgba(0,0,0,.05));
-    background-image: linear-gradient(transparent,rgba(0,0,0,0) 40%,rgba(0,0,0,.05));
+    
 }
 
 .button:hover, 
@@ -696,7 +691,7 @@ legend span {
 
 .button:focus { outline: 0 }
 .button-active,
-.button:active { box-shadow: 0 0 0 1px rgba(0,0,0,.1) inset,0 0 6px rgba(0,0,0,.15) inset }
+.button:active { box-shadow: 0 0 0 2px rgba(0,0,0,.05) inset,0 0 6px rgba(0,0,0,.15) inset }
 .button[disabled],
 .button-disabled,
 .button-disabled:hover,
@@ -730,8 +725,6 @@ a.button-selected {
 .button-warning,
 .button-secondary {
     color: white;
-    border-radius: 4px;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
 
 .button-success {
@@ -913,7 +906,6 @@ a.button-selected {
 /* Note: Design for a width of 480px */
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-
 
 
     .container { width: 420px; }
