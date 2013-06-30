@@ -131,14 +131,6 @@ body {
     -webkit-text-size-adjust: 100%;
 }
 
-.hide-text {
-    font: 0/0 a;
-    color: transparent;
-    text-shadow: none;
-    background-color: transparent;
-    border: 0;
-}
-
 a{
     cursor: pointer;
 }
@@ -678,8 +670,7 @@ legend span {
     
 }
 
-.button:hover, 
-.button:focus{
+.button:hover{
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#1a000000', GradientType=0);
     background-image: -webkit-gradient(linear,0 0,0 100%,from(transparent),color-stop(40%,rgba(0,0,0,.05)),to(rgba(0,0,0,.1)));
     background-image: -webkit-linear-gradient(transparent,rgba(0,0,0,.05) 40%,rgba(0,0,0,.1));
@@ -939,6 +930,15 @@ a.button-selected {
 .remove-bottom { margin-bottom: 0 !important; }
 .half-bottom { margin-bottom: 10px !important; }
 .add-bottom { margin-bottom: 20px !important; }
+
+.hide-text {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
+
 @media only screen and (max-width: 480px) {
 
     img{
