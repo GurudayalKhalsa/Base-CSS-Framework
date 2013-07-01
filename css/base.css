@@ -649,25 +649,13 @@ legend span {
 }
 .button {
     font-size: 100%;
-    *font-size: 90%;
-    *overflow: visible;
     padding: .5em 1.5em;
     margin: 2px 0;
     color: #444;
-    color: rgba(0,0,0,.8);
-    *color: #444;
     border: none;
     background-color: #ddd;
-    box-shadow: 0px 0px 5px rgba(0,0,0,0.2) inset;
     text-decoration: none;
-    border-radius: 4px;
-    -webkit-font-smoothing: antialiased;
-    -webkit-transition: .1s linear -webkit-box-shadow;
-    -moz-transition: .1s linear -moz-box-shadow;
-    -ms-transition: .1s linear box-shadow;
-    -o-transition: .1s linear box-shadow;
-    transition: .1s linear box-shadow;
-    
+    border-radius: 4px;    
 }
 
 .button:hover{
@@ -682,7 +670,7 @@ legend span {
 
 .button:focus { outline: 0 }
 .button-active,
-.button:active { box-shadow: 0 0 0 2px rgba(0,0,0,.05) inset,0 0 6px rgba(0,0,0,.15) inset }
+.button:active { box-shadow: 0 0 0 1px rgba(0,0,0,.05) inset,0 0 6px rgba(0,0,0,.15) inset }
 .button[disabled],
 .button-disabled,
 .button-disabled:hover,
@@ -719,19 +707,19 @@ a.button-selected {
 }
 
 .button-success {
-    background: rgb(28, 184, 65); /* this is a green */
+    background: #20ae32; /* this is a green */
 }
 
 .button-error {
-    background: rgb(202, 60, 60); /* this is a maroon */
+    background: #bb262e; /* this is a maroon */
 }
 
 .button-warning {
-    background: rgb(223, 117, 20); /* this is an orange */
+    background: #d56011; /* this is an orange */
 }
 
 .button-secondary {
-    background: rgb(66, 184, 221); /* this is a light blue */
+    background: #41b8dd; /* this is a light blue */
 }
 
 
