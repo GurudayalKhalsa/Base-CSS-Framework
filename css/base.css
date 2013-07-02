@@ -13,7 +13,7 @@ Utilizes Bootstrap CSS, Skeleton CSS, Pure CSS, Normalize CSS and others
 #Links
 #Lists
 #Tables
-#Menus
+#Header
 #Forms
 #Buttons
 #Grids and Responsiveness
@@ -136,13 +136,13 @@ a{
 }
 
 /*enables smooth resizing for responsive web page*/
-/*.container{
+.container{
     -webkit-transition: .2s linear width;
     -moz-transition: .2s linear width;
     -ms-transition: .2s linear width;
     -o-transition: .2s linear width;
     transition: .2s linear width;
-}*/
+}
 
 
 /* #Typography
@@ -229,14 +229,7 @@ table {
 .table thead th {
   vertical-align: bottom;
 }
-.table caption + thead tr:first-child th,
-.table caption + thead tr:first-child td,
-.table colgroup + thead tr:first-child th,
-.table colgroup + thead tr:first-child td,
-.table thead:first-child tr:first-child th,
-.table thead:first-child tr:first-child td {
-  border-top: 0;
-}
+
 .table tbody + tbody {
   border-top: 2px solid #dddddd;
 }
@@ -337,119 +330,28 @@ table {
 .table-hover tbody tr:hover > th {
   background-color: #f5f5f5;
 }
-table td[class*="span"],
-table th[class*="span"],
-.row-fluid table td[class*="span"],
-.row-fluid table th[class*="span"] {
-  display: table-cell;
-  float: none;
-  margin-left: 0;
-}
-.table td.span1,
-.table th.span1 {
-  float: none;
-  width: 44px;
-  margin-left: 0;
-}
-.table td.span2,
-.table th.span2 {
-  float: none;
-  width: 124px;
-  margin-left: 0;
-}
-.table td.span3,
-.table th.span3 {
-  float: none;
-  width: 204px;
-  margin-left: 0;
-}
-.table td.span4,
-.table th.span4 {
-  float: none;
-  width: 284px;
-  margin-left: 0;
-}
-.table td.span5,
-.table th.span5 {
-  float: none;
-  width: 364px;
-  margin-left: 0;
-}
-.table td.span6,
-.table th.span6 {
-  float: none;
-  width: 444px;
-  margin-left: 0;
-}
-.table td.span7,
-.table th.span7 {
-  float: none;
-  width: 524px;
-  margin-left: 0;
-}
-.table td.span8,
-.table th.span8 {
-  float: none;
-  width: 604px;
-  margin-left: 0;
-}
-.table td.span9,
-.table th.span9 {
-  float: none;
-  width: 684px;
-  margin-left: 0;
-}
-.table td.span10,
-.table th.span10 {
-  float: none;
-  width: 764px;
-  margin-left: 0;
-}
-.table td.span11,
-.table th.span11 {
-  float: none;
-  width: 844px;
-  margin-left: 0;
-}
-.table td.span12,
-.table th.span12 {
-  float: none;
-  width: 924px;
-  margin-left: 0;
-}
-.table tbody tr.success > td {
-  background-color: #dff0d8;
-}
-.table tbody tr.error > td {
-  background-color: #f2dede;
-}
-.table tbody tr.warning > td {
-  background-color: #fcf8e3;
-}
-.table tbody tr.info > td {
-  background-color: #d9edf7;
-}
-.table-hover tbody tr.success:hover > td {
-  background-color: #d0e9c6;
-}
-.table-hover tbody tr.error:hover > td {
-  background-color: #ebcccc;
-}
-.table-hover tbody tr.warning:hover > td {
-  background-color: #faf2cc;
-}
-.table-hover tbody tr.info:hover > td {
-  background-color: #c4e3f3;
-}
 
 
-/* #Menus
+/* #Header
 ================================================== */
+
+.header{
+  padding: 10px 0;
+  overflow: overlay;
+}
+
+a.logo{
+  padding: 10px;
+  font-size: 1.2em;
+  float: left;
+}
 
 /*--- Main Nav ---*/
 
 .nav{
-    text-align: center;
+    display: inline;
+    float: right;
+    margin: 0;
 }
 
 .nav > li{
@@ -653,6 +555,7 @@ legend span {
     margin: 2px 0;
     color: #444;
     border: none;
+    box-shadow: 0px 0px 2px #666;
     background-color: #ddd;
     text-decoration: none;
     border-radius: 4px;    
@@ -927,6 +830,21 @@ a.button-selected {
     border: 0;
 }
 
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+
+.clearfix:after {
+  clear: both;
+}
+
 @media only screen and (max-width: 480px) {
 
     img{
@@ -934,43 +852,3 @@ a.button-selected {
     }
 
 }
-
-
-
-/* #Media Queries
-================================================== */
-
-    /* Smaller than standard 960 (devices and browsers) */
-    @media only screen and (max-width: 959px) {}
-
-    /* Tablet Portrait size to standard 960 (devices and browsers) */
-    @media only screen and (min-width: 768px) and (max-width: 959px) {}
-
-    /* All Mobile Sizes (devices and browser) */
-    @media only screen and (max-width: 767px) {}
-
-    /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
-    @media only screen and (min-width: 480px) and (max-width: 767px) {}
-
-    /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
-    @media only screen and (max-width: 479px) {}
-
-
-/* #Font-Face
-================================================== */
-/*  This is the proper syntax for an @font-face file
-        Just create a "fonts" folder at the root,
-        copy your FontName into code below and remove
-        comment brackets */
-
-/*  @font-face {
-        font-family: 'FontName';
-        src: url('../fonts/FontName.eot');
-        src: url('../fonts/FontName.eot?iefix') format('eot'),
-             url('../fonts/FontName.woff') format('woff'),
-             url('../fonts/FontName.ttf') format('truetype'),
-             url('../fonts/FontName.svg#webfontZam02nTh') format('svg');
-        font-weight: normal;
-        font-style: normal; }
-*/
-
