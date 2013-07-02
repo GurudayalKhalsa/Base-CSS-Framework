@@ -136,13 +136,13 @@ a{
 }
 
 /*enables smooth resizing for responsive web page*/
-.container{
+/*.container{
     -webkit-transition: .2s linear width;
     -moz-transition: .2s linear width;
     -ms-transition: .2s linear width;
     -o-transition: .2s linear width;
     transition: .2s linear width;
-}
+}*/
 
 
 /* #Typography
@@ -337,7 +337,7 @@ table {
 
 .header{
   padding: 10px 0;
-  overflow: overlay;
+  overflow: auto;
 }
 
 a.logo{
@@ -348,10 +348,25 @@ a.logo{
 
 /*--- Main Nav ---*/
 
+.navdrop{
+  display: none;
+  width: 25px;
+  height: 25px;
+  margin-right: 20px;
+  margin-top: 5px;
+  padding-left: 6px;
+  padding-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  float: right;
+}
+
 .nav{
     display: inline;
     float: right;
     margin: 0;
+    padding-left: 0;
+    border-bottom: 1px solid #ccc;
 }
 
 .nav > li{
@@ -370,7 +385,7 @@ a.logo{
 /*--- DROPDOWN ---*/
 
 /*caret beside li*/
-.dropdown > a:after {
+.dropdown > a:after, .caret:after{
   display: inline-block;
   width: 0;
   height: 0;
@@ -452,6 +467,18 @@ a.logo{
 }
 
 @media only screen and (max-width: 767px) {
+
+    .nav{
+      display: none;
+    }
+
+    .navdrop{
+      display: block;
+    }
+
+    .navdrop:hover .nav{
+      display: block;
+    }
 
     .nav, .nav > li{
         width: 100%;
@@ -555,7 +582,7 @@ legend span {
     margin: 2px 0;
     color: #444;
     border: none;
-    box-shadow: 0px 0px 2px #666;
+    border: 1px solid #ccc;
     background-color: #ddd;
     text-decoration: none;
     border-radius: 4px;    
@@ -573,7 +600,7 @@ legend span {
 
 .button:focus { outline: 0 }
 .button-active,
-.button:active { box-shadow: 0 0 0 1px rgba(0,0,0,.05) inset,0 0 6px rgba(0,0,0,.15) inset }
+.button:active { box-shadow: 0 0 0 1px rgba(0,0,0,.15) inset,0 0 6px rgba(0,0,0,.25) inset }
 .button[disabled],
 .button-disabled,
 .button-disabled:hover,
