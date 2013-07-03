@@ -148,16 +148,16 @@ a{
 /* #Typography
 ================================================== */
 h1, h2, h3, h4, h5, h6 {
-    color: #181818;
+    color: #333333;
     font-weight: normal; 
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
-h1 { font-size: 46px; line-height: 50px; margin-bottom: 14px;}
-h2 { font-size: 35px; line-height: 40px; margin-bottom: 10px; }
-h3 { font-size: 28px; line-height: 34px; margin-bottom: 8px; }
-h4 { font-size: 21px; line-height: 30px; margin-bottom: 4px; }
-h5 { font-size: 17px; line-height: 24px; }
-h6 { font-size: 14px; line-height: 21px; }
+h1 { font-size: 46px; line-height: 40px; margin-bottom: 14px; margin-top: 25px;}
+h2 { font-size: 35px; line-height: 40px; margin-bottom: 10px; margin-top: 20px;}
+h3 { font-size: 28px; line-height: 40px; margin-bottom: 8px; margin-top: 20px;}
+h4 { font-size: 21px; line-height: 20px; margin-bottom: 6px; margin-top: 10px;}
+h5 { font-size: 17px; line-height: 20px; margin-top: 10px;}
+h6 { font-size: 14px; line-height: 20px; margin-top: 5px;}
 .subheader { color: #777; }
 
 p { margin: 0 0 20px 0; }
@@ -398,6 +398,10 @@ a.logo{
   margin-left:5px;
 }
 
+.nocaret:after{
+  display:none;
+}
+
 .dropdown ul {
     margin: 0;
     padding:5px 0;
@@ -583,13 +587,21 @@ legend span {
     color: #444;
     border: none;
     border: 1px solid #ccc;
-    background-color: #ddd;
+    background-color: #eee;
     text-decoration: none;
     border-radius: 4px;    
+    background: rgba(255,252,255,1);
+    background-image: -moz-linear-gradient(top, rgba(255,252,255,1) 0%, rgba(235,235,235,1) 100%);
+    background-image: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,252,255,1)), color-stop(100%, rgba(235,235,235,1)));
+    background-image: -webkit-linear-gradient(top, rgba(255,252,255,1) 0%, rgba(235,235,235,1) 100%);
+    background-image: -o-linear-gradient(top, rgba(255,252,255,1) 0%, rgba(235,235,235,1) 100%);
+    background-image: -ms-linear-gradient(top, rgba(255,252,255,1) 0%, rgba(235,235,235,1) 100%);
+    background-image: linear-gradient(to bottom, rgba(255,252,255,1) 0%, rgba(235,235,235,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#1a000000', GradientType=0);
 }
 
 .button:hover{
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#1a000000', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1a000000', endColorstr='#2a000000', GradientType=0);
     background-image: -webkit-gradient(linear,0 0,0 100%,from(transparent),color-stop(40%,rgba(0,0,0,.05)),to(rgba(0,0,0,.1)));
     background-image: -webkit-linear-gradient(transparent,rgba(0,0,0,.05) 40%,rgba(0,0,0,.1));
     background-image: -moz-linear-gradient(top,rgba(0,0,0,.05) 0,rgba(0,0,0,.1));
@@ -598,9 +610,21 @@ legend span {
     background-image: linear-gradient(transparent,rgba(0,0,0,.05) 40%,rgba(0,0,0,.1));
 }
 
+
 .button:focus { outline: 0 }
 .button-active,
-.button:active { box-shadow: 0 0 0 1px rgba(0,0,0,.15) inset,0 0 6px rgba(0,0,0,.25) inset }
+.button:active { 
+    -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+    -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#11111111', endColorstr='#22222222', GradientType=0);
+    background-image: -webkit-gradient(linear,0 0,0 100%,from(transparent),color-stop(40%,rgba(0,0,0,.1)),to(rgba(0,0,0,.2)));
+    background-image: -webkit-linear-gradient(transparent,rgba(0,0,0,.1) 40%,rgba(0,0,0,.2));
+    background-image: -moz-linear-gradient(top,rgba(0,0,0,.1) 0,rgba(0,0,0,.2));
+    background-image: -ms-linear-gradient(transparent,rgba(0,0,0,.1) 40%,rgba(0,0,0,.2));
+    background-image: -o-linear-gradient(transparent,rgba(0,0,0,.1) 40%,rgba(0,0,0,.2));
+    background-image: linear-gradient(transparent,rgba(0,0,0,.1) 40%,rgba(0,0,0,.2));
+}
 .button[disabled],
 .button-disabled,
 .button-disabled:hover,
@@ -621,19 +645,17 @@ legend span {
     padding: 0;
     border: 0;
 }
-.button-primary,
-.button-selected,
-a.button-primary,
-a.button-selected {
-    background-color: #0078e7;
-    color: #fff;
-}
 
+.button-primary,
 .button-success,
 .button-error,
 .button-warning,
 .button-secondary {
     color: white;
+}
+
+.button-primary{
+    background: #0078e7; /* this is a blue */
 }
 
 .button-success {
@@ -872,10 +894,12 @@ a.button-selected {
   clear: both;
 }
 
-@media only screen and (max-width: 480px) {
-
-    img{
-        max-width: 300px;
-    }
-
+/* Responsive images (ensure images don't scale beyond their parents) */
+img {
+  max-width: 100%;
+  width: auto\9;
+  height: auto;
+  vertical-align: middle;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
 }

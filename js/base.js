@@ -19,43 +19,49 @@ function getWidth(){return document.body.clientWidth || document.documentElement
 
 
 /* 
- * Below is for the main menu when screen size < 768px
+ * For the main menu when screen size < 768px
  * nav is main menu navigation
  * navdrop is button for dropping down nav when screen viewport < 768px
 */
 
-var nav = $(".nav")[0]||$(".nav"), navdrop = $(".navdrop")[0]||$(".navdrop"), navHidden = true, maxWidth = 768;
+(function(){
 
+    var nav = $(".nav")[0]||$(".nav"), navdrop = $(".navdrop")[0]||$(".navdrop"), navHidden = true, maxWidth = 768;
 
-if(typeof navdrop.length === "undefined")
-{
-
-    window.onresize=function()
+    if(typeof navdrop.length === "undefined")
     {
-        if(getWidth()>=maxWidth)
+
+        window.onresize=function()
         {
-            nav.style.display = "block";
-            navHidden = true;
+            if(getWidth()>=maxWidth)
+            {
+                nav.style.display = "block";
+                navHidden = true;
+            }
+            else if(getWidth()<=maxWidth && navHidden == true)
+            {
+                nav.style.display = "none";
+                navHidden = true;
+            }
         }
-        else if(getWidth()<=maxWidth && navHidden == true)
+
+        navdrop.onclick=function()
         {
-            nav.style.display = "none";
-            navHidden = true;
+            if(getStyle(nav, "display")==="block")
+            {
+                nav.style.display="none";
+                navHidden = true;
+            }
+            else if(getStyle(nav, "display")==="none")
+            {
+                nav.style.display="block";
+                navHidden = false;
+            }
         }
     }
 
-    navdrop.onclick=function()
-    {
-        if(getStyle(nav, "display")==="block")
-        {
-            nav.style.display="none";
-            navHidden = true;
-        }
-        else if(getStyle(nav, "display")==="none")
-        {
-            nav.style.display="block";
-            navHidden = false;
-        }
-    }
-}
+})();
+
+
+
 
