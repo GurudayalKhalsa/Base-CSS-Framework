@@ -8,11 +8,14 @@ window.matchMedia=window.matchMedia||function(a){"use strict";var c,d=a.document
 //get element css selector
 function $(e){function f(){if(navigator.userAgent.indexOf("MSIE 8")==-1&&navigator.userAgent.indexOf("MSIE 7")==-1&&navigator.userAgent.indexOf("MSIE 6")==-1)return!1;if(navigator.userAgent.indexOf("MSIE 8")>-1)return!0;if(navigator.userAgent.indexOf("MSIE 7")>-1)return!0;if(navigator.userAgent.indexOf("MSIE 6")>-1)return!0}var t=function(e,n,r){document.getElementsByClassName?t=function(e,t,n){n=n||document;var r=n.getElementsByClassName(e),i=t?new RegExp("\\b"+t+"\\b","i"):null,s=[],o;for(var u=0,a=r.length;u<a;u+=1){o=r[u];(!i||i.test(o.nodeName))&&s.push(o)}return s}:document.evaluate?t=function(e,t,n){t=t||"*";n=n||document;var r=e.split(" "),i="",s="http://www.w3.org/1999/xhtml",o=document.documentElement.namespaceURI===s?s:null,u=[],a,f;for(var l=0,c=r.length;l<c;l+=1)i+="[contains(concat(' ', @class, ' '), ' "+r[l]+" ')]";try{a=document.evaluate(".//"+t+i,n,o,0,null)}catch(h){a=document.evaluate(".//"+t+i,n,null,0,null)}while(f=a.iterateNext())u.push(f);return u}:t=function(e,t,n){t=t||"*";n=n||document;var r=e.split(" "),i=[],s=t==="*"&&n.all?n.all:n.getElementsByTagName(t),o,u=[],a;for(var f=0,l=r.length;f<l;f+=1)i.push(new RegExp("(^|\\s)"+r[f]+"(\\s|$)"));for(var c=0,h=s.length;c<h;c+=1){o=s[c];a=!1;for(var p=0,d=i.length;p<d;p+=1){a=i[p].test(o.className);if(!a)break}a&&u.push(o)}return u};return t(e,n,r)};e=e.split(" ");var n=/\.[a-zA-Z0-9_-]*/,r=/#[a-zA-Z0-9_-]*/;if(!e[1]){e=e[0];if(r.test(e))return document.getElementById(e.replace("#",""));if(n.test(e)){var s=t(e.replace(".","")),o=[];for(i in s)(f()&&typeof s[i].getElementsByTagName=="object"||!f()&&typeof s[i].getElementsByTagName=="function")&&o.push(s[i]);return o[1]?o:o[0]}var s=document.getElementsByTagName(e);return s[1]?s:s[0]}var u=document,a;for(i in e)if(n.test(e[i])){e[i]=e[i].replace(".","");if(u[1]){a=[];for(s in u)if(f()&&typeof u[s].getElementsByTagName=="object"||!f()&&typeof u[s].getElementsByTagName=="function")for(x in t(e[i],"",u[s]))a.push(t(e[i],"",u[s])[x]);u=a.slice(0)}else{u=t(e[i],"",u);u[1]||(u=u[0])}}else if(r.test(e[i])){e[i]=e[i].replace("#","");u=document.getElementById(e[i])}else if(u[1]){a=[];for(s in u)if(f()&&typeof u[s].getElementsByTagName=="object"||!f()&&typeof u[s].getElementsByTagName=="function")for(x in u[s].getElementsByTagName(e[i]))a.push(u[s].getElementsByTagName(e[i])[x]);u=a.slice(0)}else{u=u.getElementsByTagName(e[i]);u[1]||(u=u[0])}return u};
 
+//cross-browser html5 placeholders
+function placeholders(e){var e;typeof e=="undefined"&&(e="#888888");if("placeholder"in document.createElement("input"))return;t(document.getElementsByTagName("input"));t(document.getElementsByTagName("textarea"));function t(t){var n,r,i,s,o,u;for(n=0,r=t.length;n<r;n++){i=t[n].style.color;if(t[n].nodeName=="TEXTAREA"||t[n].type==="text"){t[n].value=t[n].placeholder;t[n].style.color=e;t[n].onfocus=function(){if(this.value===this.placeholder){this.value="";this.style.color=i}};t[n].onblur=function(){if(this.value===""){this.value=this.placeholder;this.style.color=e}}}else if(t[n].type==="password"){t[n].value=t[n].placeholder;s=t[n].placeholder;o=document.createElement("input");u=t[n].parentNode.cloneNode();o.type="text";o.style.color=e;o.placeholder=t[n].placeholder;o.value=o.placeholder;t[n].parentNode.replaceChild(o,t[n]);a(t[n]);function a(t){t.onfocus=function(){var t,n;if(this.value===this.placeholder){value=this.value;t=document.createElement("input");t.type="password";t.placeholder=value;t.value="";t.name="pw";t.style.letterSpacing="3px";t.style.color=i;this.parentNode.replaceChild(t,this);setTimeout(function(){t.focus()},10);n=document.getElementsByName("pw")[0];n.removeAttribute("name");n.onblur=function(){var t,n;if(this.value===""){t=document.createElement("input");t.type="text";t.placeholder=value;t.value=value;t.name="pw";t.style.color=e;this.parentNode.replaceChild(t,this);n=document.getElementsByName("pw")[0];n.removeAttribute("name");a(n)}}}}}}}}};
+
 //cross-browser getStyle
 function getStyle(el,style){if(el.currentStyle)return el.currentStyle[style];else if(document.defaultView&&document.defaultView.getComputedStyle)return document.defaultView.getComputedStyle(el,"")[style];else return el.style[style]};
 
-//cross-browser inner width
-function getInnerWidth(){return window.innerWidth || document.documentElement.clientWidth;}
+//cross-browser body width
+function getWidth(){return document.body.clientWidth || document.documentElement.clientWidth;}
 
 
 /* 
@@ -21,23 +24,38 @@ function getInnerWidth(){return window.innerWidth || document.documentElement.cl
  * navdrop is button for dropping down nav when screen viewport < 768px
 */
 
-var nav = $(".nav"), isHidden = true;
+var nav = $(".nav")[0]||$(".nav"), navdrop = $(".navdrop")[0]||$(".navdrop"), navHidden = true, maxWidth = 768;
 
-$(".navdrop").onclick=function()
+
+if(typeof navdrop.length === "undefined")
 {
-    if(getStyle(nav, "display")==="block") 
+
+    window.onresize=function()
     {
-        nav.style.display="none";
-        isHidden = true;
+        if(getWidth()>=maxWidth)
+        {
+            nav.style.display = "block";
+            navHidden = true;
+        }
+        else if(getWidth()<=maxWidth && navHidden == true)
+        {
+            nav.style.display = "none";
+            navHidden = true;
+        }
     }
-    else
+
+    navdrop.onclick=function()
     {
-        nav.style.display="block";
-        isHidden = false;
+        if(getStyle(nav, "display")==="block")
+        {
+            nav.style.display="none";
+            navHidden = true;
+        }
+        else if(getStyle(nav, "display")==="none")
+        {
+            nav.style.display="block";
+            navHidden = false;
+        }
     }
 }
 
-window.onresize=function()
-{
-    if(getInnerWidth() > 768 && getStyle(nav, "display")==="none" && isHidden === true) nav.style.display="block";
-}

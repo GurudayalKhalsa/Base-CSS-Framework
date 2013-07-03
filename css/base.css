@@ -338,6 +338,7 @@ table {
 .header{
   padding: 10px 0;
   overflow: auto;
+  border-bottom: 1px solid #ccc;
 }
 
 a.logo{
@@ -366,7 +367,6 @@ a.logo{
     float: right;
     margin: 0;
     padding-left: 0;
-    border-bottom: 1px solid #ccc;
 }
 
 .nav > li{
