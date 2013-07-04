@@ -58,7 +58,7 @@ table{border-collapse:collapse;border-spacing:0}
 input[type="radio"]{margin:3px 0.5ex;}
 body{background:#fff;font:14px/21px "Helvetica Neue",Helvetica,Arial,sans-serif;color:#444;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%;}
 a{cursor:pointer;}
-h1,h2,h3,h4,h5,h6{color:#333333;font-weight:normal;}
+h1,h2,h3,h4,h5,h6{color:#333333;font-weight:bold;}
 h1 a,h2 a,h3 a,h4 a,h5 a,h6 a{font-weight:inherit;}
 h1{font-size:46px;line-height:40px;margin-bottom:14px;margin-top:25px;}
 h2{font-size:35px;line-height:40px;margin-bottom:10px;margin-top:20px;}
