@@ -24,3 +24,4 @@ See demo folder or https://dl.dropboxusercontent.com/u/103707041/github/Base%20C
 
 - Fontawesome
 
+Licensed under the MIT License - http://opensource.org/licenses/MIT
