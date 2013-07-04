@@ -585,12 +585,11 @@ legend span {
     padding: .5em 1.5em;
     margin: 2px 0;
     color: #444;
-    border: none;
     border: 1px solid #ccc;
     background-color: #eee;
     text-decoration: none;
     border-radius: 4px;    
-    background: rgba(255,252,255,1);
+    background: #eee;
     background-image: -moz-linear-gradient(top, rgba(255,252,255,1) 0%, rgba(235,235,235,1) 100%);
     background-image: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,252,255,1)), color-stop(100%, rgba(235,235,235,1)));
     background-image: -webkit-linear-gradient(top, rgba(255,252,255,1) 0%, rgba(235,235,235,1) 100%);
