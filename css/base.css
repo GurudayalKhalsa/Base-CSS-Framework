@@ -347,7 +347,7 @@ a.logo{
   float: left;
 }
 
-/*--- Main Nav ---*/
+/*--- Navigation Bar ---*/
 
 .navdrop{
   display: none;
@@ -362,9 +362,12 @@ a.logo{
   float: right;
 }
 
+.header .nav{
+  float: right;
+}
+
 .nav{
     display: inline;
-    float: right;
     margin: 0;
     padding-left: 0;
 }
