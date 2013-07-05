@@ -471,7 +471,7 @@ a.logo{
 .dropdown ul li a:focus{
   color: #ffffff;
   text-decoration: none;
-  background-color: #888;
+  background-color: #08c;
 }
 
 @media only screen and (max-width: 767px) {

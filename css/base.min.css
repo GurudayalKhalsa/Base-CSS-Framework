@@ -1,9 +1,4 @@
-/* Base CSS Framework - By Gurudayal Khalsa
-
-Licensed under the MIT License - http://opensource.org/licenses/MIT
-
-Utilizes Bootstrap CSS, Skeleton CSS, Pure CSS, Normalize CSS and others
-*/
+/*base.css - minified*/
 article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}
 audio,canvas,video{display:inline-block;*display:inline;*zoom:1}
 audio:not([controls]){display:none;height:0}
@@ -132,7 +127,7 @@ a.logo{padding:10px;font-size:1.2em;float:left;font-weight:bold;}
 .dropdown:hover ul{display:block;}
 .dropdown ul li{margin:0;}
 .dropdown ul li a{text-align:left;display:block;padding:3px 20px;clear:both;line-height:20px;color:#333333;white-space:nowrap;}
-.dropdown ul li a:hover,.dropdown ul li a:focus{color:#ffffff;text-decoration:none;background-color:#888;}
+.dropdown ul li a:hover,.dropdown ul li a:focus{color:#ffffff;text-decoration:none;background-color:#08c;}
 @media only screen and (max-width:767px){.nav{display:none;}
 .navdrop{display:block;}
 .navdrop:hover .nav{display:block;}
