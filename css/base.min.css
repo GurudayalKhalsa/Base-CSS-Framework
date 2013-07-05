@@ -128,12 +128,12 @@ a.logo{padding:10px;font-size:1.2em;float:left;font-weight:bold;}
 .dropdown ul li{margin:0;}
 .dropdown ul li a{text-align:left;display:block;padding:3px 20px;clear:both;line-height:20px;color:#333333;white-space:nowrap;}
 .dropdown ul li a:hover,.dropdown ul li a:focus{color:#ffffff;text-decoration:none;background-color:#08c;}
-@media only screen and (max-width:767px){.nav{display:none;}
-.navdrop{display:block;}
-.navdrop:hover .nav{display:block;}
-.nav,.nav>li{width:100%;text-align:left;padding:0;}
-.dropdown ul,.dropdown ul:before,.dropdown ul:after{border:none;}
-.dropdown:hover ul{display:block;margin-left:10px;position:static;}
+@media only screen and (max-width:767px){.header .nav{display:none;}
+.header .navdrop{display:block;}
+.header .navdrop:hover .nav{display:block;}
+.header .nav,.header .nav>li{width:100%;text-align:left;padding:0;}
+.header .dropdown ul,.header .dropdown ul:before,.header .dropdown ul:after{border:none;}
+.header .dropdown:hover ul{display:block;margin-left:10px;position:static;}
 }
 form{margin-bottom:20px;}
 fieldset{margin-bottom:20px;}

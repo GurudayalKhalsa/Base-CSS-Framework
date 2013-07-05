@@ -476,29 +476,29 @@ a.logo{
 
 @media only screen and (max-width: 767px) {
 
-    .nav{
+    .header .nav{
       display: none;
     }
 
-    .navdrop{
+    .header .navdrop{
       display: block;
     }
 
-    .navdrop:hover .nav{
+    .header .navdrop:hover .nav{
       display: block;
     }
 
-    .nav, .nav > li{
+    .header .nav, .header .nav > li{
         width: 100%;
         text-align: left;
         padding: 0;
     }
 
-    .dropdown ul, .dropdown ul:before, .dropdown ul:after{
+    .header .dropdown ul, .header .dropdown ul:before, .header .dropdown ul:after{
         border: none;
     }
 
-    .dropdown:hover ul{
+    .header .dropdown:hover ul{
         display: block;
         margin-left: 10px;
         position: static;
