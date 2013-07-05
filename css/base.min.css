@@ -1,9 +1,4 @@
-/* Base CSS Framework - By Gurudayal Khalsa
-
-Licensed under the MIT License - http://opensource.org/licenses/MIT
-
-Utilizes Bootstrap CSS, Skeleton CSS, Pure CSS, Normalize CSS and others
-*/
+/*base.css - minified*/
 article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}
 audio,canvas,video{display:inline-block;*display:inline;*zoom:1}
 audio:not([controls]){display:none;height:0}
@@ -116,9 +111,10 @@ table{max-width:100%;background-color:transparent;border-collapse:collapse;borde
 .table-striped tbody>tr:nth-child(odd)>td,.table-striped tbody>tr:nth-child(odd)>th{background-color:#f9f9f9;}
 .table-hover tbody tr:hover>td,.table-hover tbody tr:hover>th{background-color:#f5f5f5;}
 .header{padding:10px 0;overflow:auto;border-bottom:1px solid #ccc;}
-a.logo{padding:10px;font-size:1.2em;float:left;}
+a.logo{padding:10px;font-size:1.2em;float:left;font-weight:bold;}
 .navdrop{display:none;width:25px;height:25px;margin-right:20px;margin-top:5px;padding-left:6px;padding-top:4px;border:1px solid #ccc;border-radius:5px;float:right;}
-.nav{display:inline;float:right;margin:0;padding-left:0;}
+.header .nav{float:right;}
+.nav{display:inline;margin:0;padding-left:0;}
 .nav>li{margin-left:-5px;margin-bottom:0;}
 .nav>li,.nav>li>a{display:inline-block;}
 .nav>li>a{padding:10px;}
@@ -159,11 +155,11 @@ label span,legend span{font-weight:normal;font-size:13px;color:#444;}
 .button-hidden{display:none}
 .button::-moz-focus-inner{padding:0;border:0;}
 .button-primary,.button-success,.button-error,.button-warning,.button-secondary{color:white;}
-.button-primary{background:#0078e7;}
-.button-success{background:#20ae32;}
-.button-error{background:#bb262e;}
-.button-warning{background:#d56011;}
-.button-secondary{background:#41b8dd;}
+.button-primary{background:#3366bb;border-color:#33589f;}
+.button-secondary{background:#41b8dd;border-color:#339dc5;}
+.button-success{background:#20ae32;border-color:#1d9322;}
+.button-error{background:#bb262e;border-color:#a01221;}
+.button-warning{background:#d56011;border-color:#b4420e;}
 .container{width:960px;margin:0 auto;padding:0;height:auto;}
 .container .column,.container .columns{float:left;display:inline;margin-left:10px;margin-right:10px;}
 .row{margin-bottom:20px;}

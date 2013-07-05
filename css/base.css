@@ -345,6 +345,7 @@ a.logo{
   padding: 10px;
   font-size: 1.2em;
   float: left;
+  font-weight: bold;
 }
 
 /*--- Navigation Bar ---*/
@@ -657,23 +658,28 @@ legend span {
 }
 
 .button-primary{
-    background: #0078e7; /* this is a blue */
-}
-
-.button-success {
-    background: #20ae32; /* this is a green */
-}
-
-.button-error {
-    background: #bb262e; /* this is a maroon */
-}
-
-.button-warning {
-    background: #d56011; /* this is an orange */
+    background: #3366bb; /* this is a blue */
+    border-color: #33589f; /* this is a blue */
 }
 
 .button-secondary {
     background: #41b8dd; /* this is a light blue */
+    border-color: #339dc5; /* this is a light blue */
+}
+
+.button-success {
+    background: #20ae32; /* this is a green */
+    border-color: #1d9322; /* this is a green */
+}
+
+.button-error {
+    background: #bb262e; /* this is a maroon */
+    border-color: #a01221; /* this is a maroon */
+}
+
+.button-warning {
+    background: #d56011; /* this is an orange */
+    border-color: #b4420e; /* this is an orange */
 }
 
 
