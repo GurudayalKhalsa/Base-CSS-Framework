@@ -107,18 +107,24 @@ $("[data-tooltip]").mouseenter(function()
     var tooltip = $(document.createElement("div"))
                   .addClass("tooltip")
                   .append(e.attr("data-tooltip"))
-                  .css({ "left":offset.left, "top":offset.top+e.height() })
-                  .appendTo(document.body)
-                  .hide()
-                  .fadeIn(100,function()
-                    {
-                        $(this).css("opacity",0.9);
-                    });
+                  .appendTo(e)
+                  .hide();
+    
+    setTimeout(function()
+    {
+        tooltip.fadeIn(200,function()
+        {
+            $(this).css("opacity",0.9);
+        });
+    },300);
 });
 
 $("[data-tooltip]").mouseleave(function()
 {
-    $(".tooltip").fadeOut(100,function(){$(this).remove()});
+    setTimeout(function()
+    {
+        $(".tooltip").fadeOut(200,function(){$(this).remove()});
+    },  100);
 });
 
 /*

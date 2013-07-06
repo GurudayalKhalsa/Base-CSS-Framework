@@ -893,25 +893,30 @@ input[type="radio"]{
 
 .tooltip{
     position:absolute;
-    padding: 5px;
+    padding: 7px;
     border-radius: 4px;
     text-align: center;
     background-color: #000;
     color:#fff;
     font-weight: normal;
-    font-size: 11px;
-    margin-top:21px;
+    font-size: 12px;
+    margin-top:12px;
     max-width: 120px;
+}
+
+.tooltip:hover{
+  display: none;
 }
 
 .tooltip::before {
   position: absolute;
-  top: -4px;
-  left: 10px;
+  top: -6px;
+  left: 50%;
+  margin-left: -6px;
   display: inline-block;
-  border-right: 5px solid transparent;
-  border-bottom: 5px solid #000;
-  border-left: 5px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #000;
+  border-left: 6px solid transparent;
   content: '';
 }
 

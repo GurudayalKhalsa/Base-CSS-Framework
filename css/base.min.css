@@ -249,8 +249,9 @@ input[type="radio"]{margin:3px 0.5ex;}
 .container .columns,.container .column{margin:0;}
 .container .one.column,.container .one.columns,.container .two.columns,.container .three.columns,.container .four.columns,.container .five.columns,.container .six.columns,.container .seven.columns,.container .eight.columns,.container .nine.columns,.container .ten.columns,.container .eleven.columns,.container .twelve.columns,.container .thirteen.columns,.container .fourteen.columns,.container .fifteen.columns,.container .sixteen.columns,.container .one-third.column,.container .two-thirds.column{width:420px;}
 }
-.tooltip{position:absolute;padding:5px;border-radius:4px;text-align:center;background-color:#000;color:#fff;font-weight:normal;font-size:11px;margin-top:21px;max-width:120px;}
-.tooltip::before{position:absolute;top:-4px;left:10px;display:inline-block;border-right:5px solid transparent;border-bottom:5px solid #000;border-left:5px solid transparent;content:'';}
+.tooltip{position:absolute;padding:7px;border-radius:4px;text-align:center;background-color:#000;color:#fff;font-weight:normal;font-size:12px;margin-top:12px;max-width:120px;}
+.tooltip:hover{display:none;}
+.tooltip::before{position:absolute;top:-6px;left:50%;margin-left:-6px;display:inline-block;border-right:6px solid transparent;border-bottom:6px solid #000;border-left:6px solid transparent;content:'';}
 .remove-bottom{margin-bottom:0 !important;}
 .half-bottom{margin-bottom:10px !important;}
 .add-bottom{margin-bottom:20px !important;}
