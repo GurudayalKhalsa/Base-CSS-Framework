@@ -539,7 +539,7 @@ input[type="radio"]{
     font-size: 100%;
     padding: .5em 1.5em;
     margin: 2px 0;
-    color: #444;
+    color: #333;
     border: 1px solid #ccc;
     background-color: #eee;
     text-decoration: none;
@@ -564,9 +564,8 @@ input[type="radio"]{
     background-image: linear-gradient(transparent,rgba(0,0,0,.05) 40%,rgba(0,0,0,.1));
 }
 
-
 .button:focus { outline: 0 }
-.button-active,
+.button.active,
 .button:active { 
     -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
     -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
@@ -580,10 +579,10 @@ input[type="radio"]{
     background-image: linear-gradient(transparent,rgba(0,0,0,.1) 40%,rgba(0,0,0,.2));
 }
 .button[disabled],
-.button-disabled,
-.button-disabled:hover,
-.button-disabled:focus,
-.button-disabled:active {
+.button.disabled,
+.button.disabled:hover,
+.button.disabled:focus,
+.button.disabled:active {
     border: 0;
     background-image: none;
     filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
@@ -594,7 +593,7 @@ input[type="radio"]{
     cursor: not-allowed;
     box-shadow: none;
 }
-.button-hidden { display: none }
+.button.hidden { display: none }
 .button::-moz-focus-inner {
     padding: 0;
     border: 0;
@@ -605,6 +604,14 @@ input[type="radio"]{
 .button-error,
 .button-warning,
 .button-secondary {
+    color: #fff;
+}
+
+.button-primary:hover,
+.button-success:hover,
+.button-error:hover,
+.button-warning:hover,
+.button-secondary:hover {
     color: white;
 }
 
@@ -633,6 +640,61 @@ input[type="radio"]{
     border-color: #b4420e; /* this is an orange */
 }
 
+.button-group {
+  display: inline;
+  margin-left: 5px;
+  padding-left: 0;
+}
+
+.button-group .button{
+  margin-left: -5px;
+  border-radius: 0;
+  display: inline-block;
+}
+
+.button-group .button:first-child{
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.button-group .button:last-child{
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.button.dropdown:after{
+  display: inline-block;
+  width: 0;
+  height: 0;
+  vertical-align: top;
+  border-top: 4px solid #343434;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  content: "";
+  margin-top:6px;
+  margin-left:5px;
+}
+
+.button-primary.dropdown:after,
+.button-success.dropdown:after,
+.button-error.dropdown:after,
+.button-warning.dropdown:after,
+.button-secondary.dropdown:after {
+    border-top-color: white;
+}
+
+.dropdown ul i[class^="icon-"]{
+    margin-right: 7px;
+}
+
+.button-group .button.dropdown > ul{
+    margin-top: 8px;
+    margin-left: -22px;
+}
+
+.button-group .button.dropdown.click > ul{
+    margin-top: 13px;
+}
 
 /* #Grids and Responsiveness
 ================================================== */
@@ -830,35 +892,26 @@ input[type="radio"]{
 /*Tooltips*/
 
 .tooltip{
-    position:fixed;
+    position:absolute;
     padding: 5px;
     border-radius: 4px;
     text-align: center;
-    background-color: #222;
+    background-color: #000;
     color:#fff;
     font-weight: normal;
-    font-size: 12px;
+    font-size: 11px;
     margin-top:21px;
+    max-width: 120px;
 }
 
 .tooltip::before {
   position: absolute;
-  top: -5px;
-  left: 9px;
+  top: -4px;
+  left: 10px;
   display: inline-block;
   border-right: 5px solid transparent;
   border-bottom: 5px solid #000;
   border-left: 5px solid transparent;
-  content: '';
-}
-.tooltip::after {
-  position: absolute;
-  top: -4px;
-  left: 10px;
-  display: inline-block;
-  border-right: 4px solid transparent;
-  border-bottom: 4px solid #000;
-  border-left: 4px solid transparent;
   content: '';
 }
 

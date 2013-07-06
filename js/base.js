@@ -78,17 +78,18 @@ if(typeof window.jQuery !== "undefined")
 
 //for the input jQuery element ".dropdown.click", enables element's subchild "ul" element to be not hidden when element is clicked
 
-var drop = $(".dropdown.click");
+var dropdowns = $(".dropdown.click");
 
-drop.click(function(event)
+dropdowns.click(function(event)
 {
-    var nav = $(this);
-    nav.toggleClass("open");
+    var dropdown = $(this);
+    var offset = dropdown.offset();
+    dropdown.toggleClass("open");
     event.stopPropagation();
 });
 $(window).click(function()
 {
-    drop.removeClass("open");
+    dropdowns.removeClass("open");
 });
 
 /*
@@ -109,13 +110,34 @@ $("[data-tooltip]").mouseenter(function()
                   .css({ "left":offset.left, "top":offset.top+e.height() })
                   .appendTo(document.body)
                   .hide()
-                  .fadeIn(100);
+                  .fadeIn(100,function()
+                    {
+                        $(this).css("opacity",0.9);
+                    });
 });
 
 $("[data-tooltip]").mouseleave(function()
 {
-    $(".tooltip").fadeOut(100,function(){this.remove()});
+    $(".tooltip").fadeOut(100,function(){$(this).remove()});
 });
+
+/*
+ * *********************
+ * ****** Buttons ******
+ * *********************
+ * - 
+*/ 
+var radio = $("[data-toggle='button-radio'] .button");
+radio.click(function()
+{
+    var active = $(this);
+    radio.each(function(i,e)
+    {
+        $(e).removeClass("active");
+    });
+    active.addClass("active");
+});
+
 
 /*
  * *********************
