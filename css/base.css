@@ -787,6 +787,14 @@ input[type="radio"] {
   margin: 3px 0.5ex;
 }
 
+label, select, button, input[type="button"], input[type="reset"], input[type="submit"], input[type="radio"], input[type="checkbox"] {
+  cursor: pointer;
+}
+
+label{
+  margin-bottom: 5px;
+}
+
 .input-append,.input-prepend {
   margin-bottom: 10px;
   font-size: 0;

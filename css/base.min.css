@@ -138,6 +138,8 @@ input[type="checkbox"]{display:inline;}
 label span,legend span{font-weight:normal;font-size:14px;color:#444;}
 legend{display:block;width:100%;padding:0;margin-bottom:20px;font-size:21px;line-height:40px;color:#333333;border:0;border-bottom:1px solid #e5e5e5;}
 input[type="radio"]{margin:3px 0.5ex;}
+label,select,button,input[type="button"],input[type="reset"],input[type="submit"],input[type="radio"],input[type="checkbox"]{cursor:pointer;}
+label{margin-bottom:5px;}
 .input-append,.input-prepend{margin-bottom:10px;font-size:0;white-space:nowrap;}
 .input-append>span,.input-prepend>span,.input-append>input,.input-prepend>input,.input-append>.button,.input-prepend>.button,.input-append>.button-group>.button,.input-prepend>.button-group>.button{display:inline-block;border-radius:0;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;vertical-align:top;height:31px;min-width:25px;margin-right:-1px;font-size:14px;}
 .input-prepend>span:first-child,.input-prepend>.button:first-child,.input-append>input:first-child{border-radius:4px 0 0 4px;}

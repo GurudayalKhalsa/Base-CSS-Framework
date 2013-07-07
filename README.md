@@ -284,3 +284,5 @@ Example:
 ###Tooltips
 
 Any element with data-tooltip="mytooltip" will, on hover, make a tooltip appear under it with mytooltip as the tooltip
+
+####See the demo HTML for more structuring guidelines.
