@@ -749,6 +749,7 @@ input[type="text"]:focus,input[type="password"]:focus,input[type="email"]:focus,
 
 textarea {
   min-height: 60px;
+  margin-top: 10px;
 }
 
 label,legend {
