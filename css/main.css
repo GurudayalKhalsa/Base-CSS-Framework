@@ -1,27 +1,4 @@
-/*makes header white on purple color scheme*/
-
-
-
-/*.header, .dropdown ul{
-    background-color: #542240;
-}
-
-.header a, .dropdown ul li a{
-    color: #fff;
-}
-
-.dropdown ul li a:hover{
-    background: #fff;
-    color: #542240;
-}
-
-.header .dropdown a:after, .caret:after{
-    border-top-color: #fff;
-}*/
-
-
-
-#products, .images{
+#products, .images, .buttons div{
     text-align: center;
 }
 
@@ -33,10 +10,20 @@ img{
     margin: 30px 0;
 }
 
-.products-title{
-    color: #666;
-    padding: 5px;
-    text-decoration: underline;
+.buttons-fontawesome{
+    padding-bottom: 30px;
+}
+
+.inputs div{
+    margin-top: 5px;
+}
+
+.inputs h4{
+    margin-bottom: 20px;
+}
+
+.input-append > input, .input-prepend > input{
+    max-width: 150px;
 }
 
 
