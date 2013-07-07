@@ -5,7 +5,7 @@ A lightweight Responsive CSS Framework
 
 #####Demo: 
 
-See demo folder or http://gurudayalkhalsa.github.io/css-framework/
+See demo folder or http://gurudayalkhalsa.github.io/base-css-framework/
 
 ###Features:
 
