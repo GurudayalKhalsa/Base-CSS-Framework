@@ -468,7 +468,7 @@ table {
   border-collapse: separate;
   *border-collapse: collapse;
   border-left: 0;
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 .table-bordered th,.table-bordered td {
@@ -480,23 +480,23 @@ table {
 }
 
 .table-bordered thead:first-child tr:first-child > th:first-child,.table-bordered tbody:first-child tr:first-child > td:first-child,.table-bordered tbody:first-child tr:first-child > th:first-child {
-  -webkit-border-top-left-radius: 2px;
-  border-top-left-radius: 2px;
+  -webkit-border-top-left-radius: 4px;
+  border-top-left-radius: 4px;
 }
 
 .table-bordered thead:first-child tr:first-child > th:last-child,.table-bordered tbody:first-child tr:first-child > td:last-child,.table-bordered tbody:first-child tr:first-child > th:last-child {
-  -webkit-border-top-right-radius: 2px;
-  border-top-right-radius: 2px;
+  -webkit-border-top-right-radius: 4px;
+  border-top-right-radius: 4px;
 }
 
 .table-bordered thead:last-child tr:last-child > th:first-child,.table-bordered tbody:last-child tr:last-child > td:first-child,.table-bordered tbody:last-child tr:last-child > th:first-child,.table-bordered tfoot:last-child tr:last-child > td:first-child,.table-bordered tfoot:last-child tr:last-child > th:first-child {
-  -webkit-border-bottom-left-radius: 2px;
-  border-bottom-left-radius: 2px;
+  -webkit-border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 4px;
 }
 
 .table-bordered thead:last-child tr:last-child > th:last-child,.table-bordered tbody:last-child tr:last-child > td:last-child,.table-bordered tbody:last-child tr:last-child > th:last-child,.table-bordered tfoot:last-child tr:last-child > td:last-child,.table-bordered tfoot:last-child tr:last-child > th:last-child {
-  -webkit-border-bottom-right-radius: 2px;
-  border-bottom-right-radius: 2px;
+  -webkit-border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 
 .table-bordered tfoot + tbody:last-child tr:last-child td:first-child {
@@ -510,13 +510,13 @@ table {
 }
 
 .table-bordered caption + thead tr:first-child th:first-child,.table-bordered caption + tbody tr:first-child td:first-child,.table-bordered colgroup + thead tr:first-child th:first-child,.table-bordered colgroup + tbody tr:first-child td:first-child {
-  -webkit-border-top-left-radius: 2px;
-  border-top-left-radius: 2px;
+  -webkit-border-top-left-radius: 4px;
+  border-top-left-radius: 4px;
 }
 
 .table-bordered caption + thead tr:first-child th:last-child,.table-bordered caption + tbody tr:first-child td:last-child,.table-bordered colgroup + thead tr:first-child th:last-child,.table-bordered colgroup + tbody tr:first-child td:last-child {
-  -webkit-border-top-right-radius: 2px;
-  border-top-right-radius: 2px;
+  -webkit-border-top-right-radius: 4px;
+  border-top-right-radius: 4px;
 }
 
 
@@ -554,7 +554,7 @@ a.logo {
   padding-left: 6px;
   padding-top: 4px;
   border: 1px solid #ccc;
-  border-radius: 2px;
+  border-radius: 5px;
   float: right;
 }
 
@@ -606,7 +606,7 @@ a.logo {
   min-width: 120px;
   position: absolute;
   background: #fff;
-  border-radius: 2px;
+  border-radius: 3px;
   border: 1px solid #ccc;
   margin-left: -1px;
   display: none; /* z-index is needed here to bring to front*/
@@ -715,7 +715,7 @@ input[type="text"],input[type="password"],input[type="email"],textarea,select {
   border: 1px solid #ccc;
   padding: 6px 4px;
   outline: none;
-  border-radius: 2px;
+  border-radius: 4px;
 
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
@@ -809,7 +809,7 @@ input[type="radio"] {
 }
 
 .input-prepend > span:first-child,.input-prepend > .button:first-child,.input-append > input:first-child {
-  border-radius: 2px 0 0 2px;
+  border-radius: 4px 0 0 4px;
 }
 
 .input-append > .button-group:last-child > .button:first-child,.input-prepend > .button-group:first-child > .button:last-child{
@@ -817,7 +817,7 @@ input[type="radio"] {
 }
 
 .input-append > span:last-child,.input-append > .button:last-child,.input-prepend > input:last-child, .input-append > .button-group > .button:last-child,.input-prepend > .button-group > .button:last-child{
-  border-radius: 0 2px 2px 0;
+  border-radius: 0 4px 4px 0;
 }
 
 .input-append > span,.input-prepend > span {
@@ -877,7 +877,7 @@ input[type="radio"] {
   border: 1px solid #ccc;
   background-color: #eee;
   text-decoration: none;
-  border-radius: 2px;
+  border-radius: 4px;
   background: #eee;
 
   background-image: -webkit-linear-gradient(top, rgba(255,252,255,1) 0%, rgba(235,235,235,1) 100%);
@@ -986,13 +986,13 @@ border-color: #339dc5; /* this is a light blue */
 }
 
 .button-group .button:first-child {
-  border-top-left-radius: 2px;
-  border-bottom-left-radius: 2px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
 }
 
 .button-group .button:last-child {
-  border-top-right-radius: 2px;
-  border-bottom-right-radius: 2px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 
 .button.dropdown:after {
@@ -1414,7 +1414,7 @@ border-color: #339dc5; /* this is a light blue */
 .tooltip {
   position: absolute;
   padding: 5px 10px;
-  border-radius: 2px;
+  border-radius: 4px;
   text-align: center;
   background-color: #000;
   color: #fff;
