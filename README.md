@@ -16,7 +16,6 @@ See demo folder or https://dl.dropboxusercontent.com/u/103707041/github/Base%20C
 - 16 column grid system
 - six buttons with automatic new button hover and active colors
 - tables
-- 
 - small compared to many other frameworks
 - responsive
 
