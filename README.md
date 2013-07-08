@@ -127,7 +127,7 @@ New button styles can be easily made with css, only declaring:
 
 The markup for the above button could be:
 
-	<a class="button .button-mybutton">Button</a>
+	<a class="button button-mybutton">Button</a>
 	
 ##Tables
 
