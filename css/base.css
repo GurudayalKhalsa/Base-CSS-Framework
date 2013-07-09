@@ -164,20 +164,7 @@ button[disabled],html input[disabled] {
 }
 
 input[type="checkbox"],input[type="radio"] {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
   padding: 0;
-}
-
-input[type="search"] {
-  -webkit-appearance: textfield;
-
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  -ms-box-sizing: content-box;
-  box-sizing: content-box;
 }
 
 input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration {
@@ -220,22 +207,15 @@ a {
 }
 
 /*enables smooth resizing for responsive web page*/
-/*.container {
-  
-
+.container {
   -webkit-transition:  .2s linear width;
-    
   -moz-transition:  .2s linear width;
-    
   -o-transition:  .2s linear width;
-    
   -ms-transition:  .2s linear width;
-    
   transition:  .2s linear width;
-
 }
 
-*/
+
 /* #Typography
 ================================================== */
 h1,h2,h3,h4,h5,h6 {
@@ -740,7 +720,7 @@ select {
   padding: 0;
 }
 
-input[type="text"]:focus,input[type="password"]:focus,input[type="email"]:focus,textarea:focus {
+input[type="text"]:focus,input[type="password"]:focus,input[type="email"]:focus,input[type="search"]:focus,textarea:focus {
   border: 1px solid #aaa;
   color: #444;
 
@@ -806,10 +786,6 @@ label{
 .input-append > span,.input-prepend > span,.input-append > input,.input-prepend > input,.input-append > .button,.input-prepend > .button, .input-append > .button-group > .button,.input-prepend > .button-group > .button {
   display: inline-block;
   border-radius: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
   vertical-align: top;
   /*any lower height than 31 and firefox makes button dropdown a little firther down than it should*/
   height: 31px;
@@ -1486,10 +1462,6 @@ border-color: #339dc5; /* this is a light blue */
 
 /* Responsive images (ensure images don't scale beyond their parents) */
 img {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
   max-width: 100%;
   width: auto\9;
   height: auto;
