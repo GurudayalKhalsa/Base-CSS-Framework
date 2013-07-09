@@ -721,7 +721,7 @@ input[type="text"],input[type="password"],input[type="email"],input[type="search
 }
 
 input[type="search"]{
-  padding: 0 14px;
+  padding: 5px 14px;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   border-radius: 15px;
