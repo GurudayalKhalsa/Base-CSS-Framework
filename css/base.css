@@ -213,22 +213,25 @@ a {
   cursor: pointer;
 }
 
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 /*enables smooth resizing for responsive web page*/
 /*.container {
   
 
--webkit-transition:  .2s linear width;
-  
--moz-transition:  .2s linear width;
-  
--o-transition:  .2s linear width;
-  
--ms-transition:  .2s linear width;
-  
-transition:  .2s linear width;
-  
-
-
+  -webkit-transition:  .2s linear width;
+    
+  -moz-transition:  .2s linear width;
+    
+  -o-transition:  .2s linear width;
+    
+  -ms-transition:  .2s linear width;
+    
+  transition:  .2s linear width;
 
 }
 
@@ -547,12 +550,12 @@ a.logo {
 /*---Navigation Bar ---*/
 .navdrop {
   display: none;
-  width: 25px;
-  height: 25px;
+  width: 33px;
+  height: 33px;
   margin-right: 20px;
   margin-top: 5px;
+  padding-top: 5px;
   padding-left: 6px;
-  padding-top: 4px;
   border: 1px solid #ccc;
   border-radius: 5px;
   float: right;
