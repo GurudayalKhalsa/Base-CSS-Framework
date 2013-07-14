@@ -1,12 +1,6 @@
 .github{
-    width: 200px;
+    width: 300px;
     margin: 20px auto;
-}
-
-.github .button{
-    width: 200px;
-    height: 75px;
-    padding-top: 28px;
 }
 
 .github i{

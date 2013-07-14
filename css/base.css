@@ -947,6 +947,13 @@ a.button{
   border: 0;
 }
 
+.button-big{
+    width: 290px;
+    height: 80px;
+    padding-top: 35px;
+    font-size: 25px;
+}
+
 .button-blue,.button-green,.button-red,.button-orange,.button-cyan,
 a.button-blue,.abutton-green,a.button-red,a.button-orange,a.button-cyan {
   color: #fff;
