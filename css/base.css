@@ -751,10 +751,6 @@ label,legend {
   font-size: 14px;
 }
 
-select {
-  max-width: 220px;
-}
-
 input[type="checkbox"] {
   display: inline;
 }
