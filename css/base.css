@@ -818,12 +818,17 @@ label{
   border-radius: 0 4px 4px 0;
 }
 
+.input-append > span:last-child, .input-append > .button:last-child, .input-append .button-group:last-child > .button:first-child{
+  margin-left: 1px;
+  border-left: 0;
+}
+
 .input-append > span,.input-prepend > span {
   min-width: 16px;
   background-color: #eeeeee;
   border: 1px solid #ccc;
   text-align: center;
-  padding: 3px 10px;
+  padding: 4px 10px;
 }
 
 .input-append > .button,.input-prepend > .button {
