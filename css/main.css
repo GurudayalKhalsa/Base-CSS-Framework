@@ -4,10 +4,9 @@
 }
 
 .github .button{
-    padding-top: 25px;
-    width: 200px; 
-    height: 50px;
-    font-size: 25px;
+    width: 200px;
+    height: 75px;
+    padding-top: 28px;
 }
 
 .github i{
