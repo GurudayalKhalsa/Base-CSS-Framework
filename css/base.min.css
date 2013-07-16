@@ -116,7 +116,7 @@ a.logo{padding:7px;margin-right:10px;font-size:1.2em;float:left;font-weight:bold
 .dropdown ul::after{position:absolute;top:-4px;left:10px;display:inline-block;border-right:4px solid transparent;border-bottom:4px solid #ffffff;border-left:4px solid transparent;content:'';}
 .dropdown:hover ul{display:block;}
 .dropdown.click:hover ul{display:none;}
-.dropdown.click.open ul{display:block;}
+.dropdown.click.open ul,.open{display:block;}
 .dropdown ul li{margin:0;}
 .dropdown ul li a{text-align:left;display:block;padding:3px 20px;clear:both;line-height:20px;color:#333333;white-space:nowrap;}
 .dropdown ul li a:hover,.dropdown ul li a:focus{color:#ffffff;text-decoration:none;background-color:#08c;}

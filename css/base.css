@@ -633,7 +633,7 @@ z-index: 100;
   display: none;
 }
 
-.dropdown.click.open ul {
+.dropdown.click.open ul, .open{
   display: block;
 }
 
