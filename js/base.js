@@ -24,6 +24,8 @@ function getElem(e,c){function f(){if(navigator.userAgent.indexOf("MSIE 8")==-1&
 
 (function(){
     
+    if(!getElem(".navdrop")) return;
+
     var nav = getElem(".nav")[0]||getElem(".nav"), navdrop = getElem(".navdrop")[0]||getElem(".navdrop"), navHidden = true, maxWidth = 768;
     
     //cross-browser getStyle
@@ -32,9 +34,8 @@ function getElem(e,c){function f(){if(navigator.userAgent.indexOf("MSIE 8")==-1&
     //cross-browser body width
     function getWidth(){return document.body.clientWidth || document.documentElement.clientWidth;}
     
-    if(typeof navdrop.length === "undefined")
+    function doResize(nav, navdrop, navHidden)
     {
-
         window.onresize=function()
         {
             if(getWidth()>=maxWidth)
@@ -62,6 +63,25 @@ function getElem(e,c){function f(){if(navigator.userAgent.indexOf("MSIE 8")==-1&
             }
         }
     }
+
+
+    if(typeof navdrop.length === "undefined") 
+    {
+        doResize(nav, navdrop, navHidden);
+    }
+    
+    else
+    {
+        if(nav.length !== navdrop.length) return;
+        navHidden = [];
+        for (i in nav)
+        {
+            navHidden[i] = true;
+            doResize(nav[i], navdrop[i], navHidden[i]);
+        }
+    }
+
+
     /*! matchMedia() polyfill - Test a CSS media type/query in JS. Authors & copyright (c) 2012: Scott Jehl, Paul Irish, Nicholas Zakas. Dual MIT/BSD license */
     /*! NOTE: If you're already including a window.matchMedia polyfill via Modernizr or otherwise, you don't need this part */
     window.matchMedia=window.matchMedia||function(a){"use strict";var c,d=a.documentElement,e=d.firstElementChild||d.firstChild,f=a.createElement("body"),g=a.createElement("div");return g.id="mq-test-1",g.style.cssText="position:absolute;top:-100em",f.style.background="none",f.appendChild(g),function(a){return g.innerHTML='&shy;<style media="'+a+'"> #mq-test-1 { width: 42px; }</style>',d.insertBefore(f,e),c=42===g.offsetWidth,d.removeChild(f),{matches:c,media:a}}}(document);
@@ -110,6 +130,8 @@ function getElem(e,c){function f(){if(navigator.userAgent.indexOf("MSIE 8")==-1&
     //for the input element ".dropdown.click", enables element's subchild "ul" element to be not hidden when element is clicked
 
     var dropdowns = getElem(".dropdown");
+
+    if(typeof dropdowns.length === "undefined") dropdowns = [dropdowns];
 
     for (i in dropdowns)
     {
