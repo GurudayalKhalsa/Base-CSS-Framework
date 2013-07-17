@@ -116,7 +116,7 @@ a.logo{padding:7px;margin-right:10px;font-size:1.2em;float:left;font-weight:bold
 .dropdown ul::after{position:absolute;top:-4px;left:10px;display:inline-block;border-right:4px solid transparent;border-bottom:4px solid #ffffff;border-left:4px solid transparent;content:'';}
 .dropdown:hover ul{display:block;}
 .dropdown.click:hover ul{display:none;}
-.dropdown.click.open ul, .header .nav.open, .open{display:block;}
+.dropdown.click.open ul,.header .nav.open,.open{display:block;}
 .dropdown ul li{margin:0;}
 .dropdown ul li a{text-align:left;display:block;padding:3px 20px;clear:both;line-height:20px;color:#333333;white-space:nowrap;}
 .dropdown ul li a:hover,.dropdown ul li a:focus{color:#ffffff;text-decoration:none;background-color:#08c;}
@@ -148,10 +148,11 @@ label{margin-bottom:5px;}
 .input-append>span:last-child,.input-append>.button:last-child,.input-prepend>input:last-child,.input-append>.button-group>.button:last-child,.input-prepend>.button-group>.button:last-child{border-radius:0 4px 4px 0;}
 .input-append>span:last-child,.input-append>.button:last-child,.input-append .button-group:last-child>.button:first-child{margin-left:1px;border-left:0;}
 .input-append>span,.input-prepend>span{min-width:16px;background-color:#eeeeee;border:1px solid #ccc;text-align:center;padding:4px 10px;}
+.input-append .button.dropdown ul,.input-prepend .button.dropdown ul{margin-top:6px;}
 .input-append>.button,.input-prepend>.button{margin:0;}
 .input-prepend>.button:first-child,.input-prepend .button-group:first-child{margin-right:-1px;}
 .input-append>.button-group>.button,.input-prepend>.button-group>.button{margin-top:0;}
-.input-append>.button-group{margin-left:4px;}
+.input-append>.button-group{margin-left:0px;}
 .button{display:inline-block;*display:inline;zoom:1;line-height:normal;white-space:nowrap;vertical-align:baseline;text-align:center;cursor:pointer;-webkit-user-drag:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
 .button::-moz-focus-inner{padding:0;border:0;}
 .button{font-size:100%;padding:.5em 1.5em;margin:2px 0;color:#333;border:1px solid #ccc;background-color:#eee;text-decoration:none;border-radius:4px;background:#eee;background-image:-webkit-linear-gradient(top,rgba(255,252,255,1) 0%,rgba(235,235,235,1) 100%);background-image:-moz-linear-gradient(top,rgba(255,252,255,1) 0%,rgba(235,235,235,1) 100%);background-image:-o-linear-gradient(top,rgba(255,252,255,1) 0%,rgba(235,235,235,1) 100%);background-image:-ms-linear-gradient(top,rgba(255,252,255,1) 0%,rgba(235,235,235,1) 100%);background-image:linear-gradient(top,rgba(255,252,255,1) 0%,rgba(235,235,235,1) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000',endColorstr='#1a000000',GradientType=0);}
