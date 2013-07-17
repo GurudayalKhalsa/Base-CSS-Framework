@@ -827,6 +827,10 @@ label{
   padding: 4px 10px;
 }
 
+.input-append .button.dropdown ul,.input-prepend .button.dropdown ul{
+  margin-top: 6px;
+}
+
 .input-append > .button,.input-prepend > .button {
   margin: 0;
 }
@@ -840,7 +844,7 @@ label{
 }
 
 .input-append > .button-group{
-  margin-left: 4px;
+  margin-left: 0px;
 }
 
 /* #Buttons
