@@ -1427,6 +1427,7 @@ border-color: #339dc5; /* this is a light blue */
 /*Tooltips*/
 .tooltip {
   position: absolute;
+  z-index: 100;
   padding: 5px 10px;
   border-radius: 4px;
   text-align: center;
