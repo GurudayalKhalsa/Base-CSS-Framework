@@ -198,7 +198,7 @@ var radio = $("[data-toggle='button-radio'] .button");
 radio.click(function()
 {
     var active = $(this);
-    radio.each(function(i,e)
+    active.parent().children().each(function(i,e)
     {
         $(e).removeClass("active");
     });
