@@ -737,7 +737,7 @@ label {
     background-image: linear-gradient(top, rgba(255, 252, 255, 1) 0%, rgba(235, 235, 235, 1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#1a000000', GradientType=0);
 }
-a.button {
+a.button, a.button:hover{
     color: #333;
 }
 .button:hover {

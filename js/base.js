@@ -141,52 +141,54 @@ if(typeof window.jQuery !== "undefined")
  */ 
 
 
-(function(){
+ (function(){
+ $.tooltips=function()
+ {
+     var tooltipNames = [];
 
-var tooltipNames = [];
+     $("[data-tooltip]").each(function(i,element)
+     {
+         var e = $(element);
+         tooltipNames[i] = e.attr("data-tooltip");
 
-$("[data-tooltip]").each(function(i,element)
-{
-    var e = $(element);
-    tooltipNames[i] = e.attr("data-tooltip");
+         e.mouseenter(function()
+         {
+             var offset = e.offset();
 
-    e.mouseenter(function()
-    {
-        var offset = e.offset();
+             var tooltip = $(document.createElement("div"))
+                           .addClass("tooltip")
+                           .append(tooltipNames[i])
+                           .css({ "left":offset.left, "top":offset.top+e.height() })
+                           .appendTo(document.body)
+                           .hide();
 
-        var tooltip = $(document.createElement("div"))
-                      .addClass("tooltip")
-                      .append(tooltipNames[i])
-                      .css({ "left":offset.left, "top":offset.top+e.height() })
-                      .appendTo(document.body)
-                      .hide();
+             setTimeout(function()
+             {
+                 tooltip.fadeIn(200,function()
+                 {
+                     $(this).css("opacity",0.9);
+                 })
+             },300);
+         });
 
-        setTimeout(function()
-        {
-            tooltip.fadeIn(200,function()
-            {
-                $(this).css("opacity",0.9);
-            })
-        },300);
-    });
-
-    e.mouseleave(function()
-    {
-        $(".tooltip").each(function(j,e)
-        {
-            e = $(e);
-            if(e.text()==tooltipNames[i]) 
-            {
-                setTimeout(function()
-                {
-                    e.fadeOut(200,function(){$(this).remove()});
-                },  100);
-            }
-        });        
-    });
-});
-
-})();
+         e.mouseleave(function()
+         {
+             $(".tooltip").each(function(j,e)
+             {
+                 e = $(e);
+                 if(e.text()==tooltipNames[i]) 
+                 {
+                     setTimeout(function()
+                     {
+                         e.fadeOut(200,function(){$(this).remove()});
+                     },  100);
+                 }
+             });        
+         });
+     });
+ };
+ $.tooltips();
+ })();
 
 /*
  * *********************
