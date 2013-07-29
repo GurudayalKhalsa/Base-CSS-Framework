@@ -589,14 +589,14 @@ a.logo {
 .dropdown ul {
   margin: 0;
   padding: 5px 0;
-  min-width: 120px;
+  min-width: 150px;
   position: absolute;
   background: #fff;
   border-radius: 3px;
   border: 1px solid #ccc;
   margin-left: -1px;
   display: none; /* z-index is needed here to bring to front*/
-z-index: 100;
+  z-index: 100;
 }
 
 /*arrow above dropdown*/
@@ -1034,9 +1034,8 @@ border-color: #339dc5; /* this is a light blue */
 }
 
 .button.dropdown > ul {
-  margin-top: 8px;
+  margin-top: 9px;
   margin-left: -22px;
-  border-top-left-radius: 0;
 }
 
 /* #Grids and Responsiveness
