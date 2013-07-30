@@ -789,7 +789,7 @@ a.button, a.button:hover{
     padding-top: 23px;
     font-size: 25px;
 }
-.button-blue, .button-green, .button-red, .button-orange, .button-cyan, a.button-blue, .abutton-green, a.button-red, a.button-orange, a.button-cyan {
+.button-blue, .button-green, .button-red, .button-orange, .button-cyan, a.button-blue, a.button-green, a.button-red, a.button-orange, a.button-cyan {
     color: #fff;
 }
 .button-blue:hover, .button-green:hover, .button-red:hover, .button-orange:hover, .button-cyan:hover {
