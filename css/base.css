@@ -792,7 +792,7 @@ a.button, a.button:hover{
 .button-blue, .button-green, .button-red, .button-orange, .button-cyan, a.button-blue, a.button-green, a.button-red, a.button-orange, a.button-cyan {
     color: #fff;
 }
-.button-blue:hover, .button-green:hover, .button-red:hover, .button-orange:hover, .button-cyan:hover {
+.button-blue:hover, .button-green:hover, .button-red:hover, .button-orange:hover, .button-cyan:hover, a.button-blue:hover, a.button-green:hover, a.button-red:hover, a.button-orange:hover, a.button-cyan:hover {
     color: white;
 }
 .button-blue {
