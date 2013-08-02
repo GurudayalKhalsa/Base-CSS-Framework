@@ -624,10 +624,14 @@ label, legend {
 input[type="checkbox"] {
     display: inline;
 }
+label input:first-child, legend input:first-child{
+    margin-right: 5px;
+}
 label span, legend span {
     font-weight: normal;
     font-size: 14px;
     color: #444;
+    vertical-align: middle;
 }
 legend {
     display: block;
