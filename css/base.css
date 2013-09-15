@@ -427,6 +427,8 @@ li p {
     padding: 10px 0;
     overflow: auto;
     border-bottom: 1px solid #ccc;
+    /*hack for Chrome not displaying float right ul.nav inside if header*/
+    display: compact;
 }
 a.logo {
     padding: 7px;
