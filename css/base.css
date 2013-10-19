@@ -448,6 +448,7 @@ a.logo {
     border: 1px solid #ccc;
     border-radius: 5px;
     float: right;
+    text-align: left;
 }
 .header .nav {
     float: right;
@@ -551,10 +552,10 @@ a.logo {
     .header .nav {
         display: none;
     }
-    .header .navdrop {
+    .navdrop {
         display: block;
     }
-    .header .navdrop:hover .nav {
+    .navdrop:hover .nav {
         display: block;
     }
     .header .nav, .header .nav > li {
