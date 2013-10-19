@@ -110,7 +110,7 @@ function getElem(e,c){function f(){if(navigator.userAgent.indexOf("MSIE 8")==-1&
      (function(){
          var dropdowns = getElem(".dropdown");
 
-         if(typeof dropdowns.length === "undefined") dropdowns = [dropdowns];
+         if(dropdowns && typeof dropdowns.length === "undefined") dropdowns = [dropdowns];
          for (i in dropdowns)
          {
              if(hasClass(dropdowns[i],"click"))
