@@ -4,11 +4,11 @@ Base CSS Framework
 
 A lightweight Responsive CSS Framework
 
-#####Demo: 
+##### Demo: 
 
 See demo folder or http://gurudayalkhalsa.github.io/Base-CSS-Framework/
 
-###Features:
+### Features:
 
 - Inspired by Bootstrap, Skeleton, Pure, Normalize.css and others
 - supports all main browsers from ie8+
@@ -20,25 +20,25 @@ See demo folder or http://gurudayalkhalsa.github.io/Base-CSS-Framework/
 - small compared to many other frameworks
 - responsive
 
-###Files to include in html: 
+### Files to include in html: 
 
 - base.css, base.js
 
-###Optional: 
+### Optional: 
 
 - Font Awesome for icons
 
-#####Licensed under the MIT License - http://opensource.org/licenses/MIT
+##### Licensed under the MIT License - http://opensource.org/licenses/MIT
 
 
 =============
 
-#Documentation:
+# Documentation:
 
-##Navigation:
+## Navigation:
 
-####Navigation Menus
-######To make a nav, use the "nav" class on a ul element.
+#### Navigation Menus
+###### To make a nav, use the "nav" class on a ul element.
 Here is some example HTML for creating a navigation menu
 
 	<ul class="nav">
@@ -50,7 +50,7 @@ Here is some example HTML for creating a navigation menu
 	
 The above nav will be a horizontal menu.
 
-####Dropdowns
+#### Dropdowns
 
 To make a dropdown menu, use the class "dropdown" on an element (usually an li element inside a ul), and create a ul as a child of that element.
 
@@ -75,7 +75,7 @@ To make a dropdown menu, use the class "dropdown" on an element (usually an li e
 
 - Optionally, if a classname of "click" is also specified on the parent element, the dropdown menu will only drop down when the parent is clicked and not on hover. Note that this requires javascript (does not require jQuery). By require I mean javascript is used to perform this task.
 
-####Main Menu/Header
+#### Main Menu/Header
 
 An example header wold look like this:
 
@@ -105,7 +105,7 @@ An example header wold look like this:
 
 - The element with class "navdrop" is displayed when small window viewport size, with the nav hidden until the navdrop is pressed. This all requires javascript (does not require jQuery)
 
-##Buttons
+## Buttons
 
 	<button class="button button-blue">A blue button</button>
 	<button class="button button-green">A green button</button>
@@ -129,7 +129,7 @@ The markup for the above button could be:
 
 	<a class="button button-mybutton">Button</a>
 	
-##Tables
+## Tables
 
 	<table class="table table-striped table-hover table-bordered">
      <tbody>
@@ -161,7 +161,7 @@ The markup for the above button could be:
 - .table-bordered creates a border around table, and vertical borders in between columns
 - .table-hover changes background color of row when hovered
 	
-##Grid
+## Grid
 
 - Responsive, 16-column grid
 - Class syntax for width of column is .one.column, .two.columns, .three.columns, etc. 
@@ -193,7 +193,7 @@ Example HTML:
     
 This will create three boxes beside eachother inside of its container
 
-##Forms
+## Forms
 
 	<form class="four columns">
         <h4>This is a form:</h4>
@@ -214,14 +214,14 @@ This will create three boxes beside eachother inside of its container
     
 The above will create a form one quarter of the container it is in
 
-####Prepended and Appended Input
+#### Prepended and Appended Input
 
 - If you want to put a span or button before a <input type="text" /> field, put the two items in order inside an element with class-name .input-prepend
 - For after a <input type="text" />, put the two items in order inside a .input-append element.
 - You can have both prepended and appended inputs, just make the parent element be .input-prepend.input-append
 - The prepended and appended elements must be either a span or .button, and the input must be input[type="text"]
 
-#####Examples:	
+##### Examples:	
 
 	<div class="input-append">
         <input type="text" placeholder="Write some text" />
@@ -240,7 +240,7 @@ The above will create a form one quarter of the container it is in
         </li>
     </div> 
 
-##Button-Groups
+## Button-Groups
 
 	<ul class="button-group">
         <li class="button"><i class="icon-download-alt"></i></li>
@@ -266,9 +266,9 @@ The above will create a form one quarter of the container it is in
 - Parent must have class .button-group
 - Children must be .buttons  
 
-##Javascript Effects
+## Javascript Effects
 
-###Button Effects
+### Button Effects
 
 - A button group with data-toggle='button-radio''s children will have a radio button like behaviour, and .active when selected
 
@@ -281,8 +281,8 @@ Example:
 	</div> 
 
 
-###Tooltips
+### Tooltips
 
 Any element with data-tooltip="mytooltip" will, on hover, make a tooltip appear under it with mytooltip as the tooltip
 
-####See the demo HTML for more structuring guidelines.
+#### See the demo HTML for more structuring guidelines.
